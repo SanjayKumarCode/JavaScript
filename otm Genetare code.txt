@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+  <input type="text" placeholder="username" id="inp"><br><br>
+ <button type="submit" id="button" onclick="generate_otp()">Send OTP</button><br><br>
+ <div id="div">
+ <samp id="OTP"></samp> 
+</div>
+<script>
+    function generate_otp()
+    {
+        var result=document.getElementById("inp").value;
+        var name=document.getElementById("inp").value;
+    var result=Math.random()*(9999-1000)+1000;
+    var otp=Math.floor(result)
+    console.log(otp)
+    document.getElementById("OTP").innerHTML=otp
+    document.getElementById("OTP").innerHTML="dear " +name+ " your opt is:-"+otp
+    }
+
+</script>
+</body>
+</html>
