@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    //coditional Statement - if , else if
+      var time=prompt("What is Time");
+      if(time > 5 && time < 12 )
+      {
+     alert("Good Morning");
+    }
+      else if(time > 12 && time < 17)
+      {
+        alert("Good Afternoon");
+     }
+      else if(time > 17 && time < 21)
+      {
+       alert("Good Evening");
+      }
+      else(time > 21 && time < 24)
+      {
+        alert("Good Night")
+      }
+  </script>
+</body>
+</html>
