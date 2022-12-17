@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>AAV</h1>
+</head>
+<body>
+    <script>
+        function greet(name,callback){
+            // 1=> hi Subam 
+            console.log(" hi " + " "+name);
+            callback();
+        } 
+        // callback function
+        function callMe(){
+            //  2=> hi Subam 
+            console.log("i am callback function");
+        }
+        greet("shubam",callMe);
+    </script>
+    
+</body>
+</html>

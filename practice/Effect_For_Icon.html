@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/91bfcaf9e5.js" crossorigin="anonymous"></script>
+</head>
+</head>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.icons a{
+    display:inline-flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 40px;
+    margin: 10px;
+   background-size: 100% 200%;
+   background-position: 0% 5%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    transition: background-position 0.5s, color 0.5s;
+
+}
+.icons a:nth-last-child(1){
+    color: #03a9f0;
+    background-image: linear-gradient(#ddd 50%, #03a9f0 50%);
+}
+.icons a:nth-last-child(2){
+    color: #f44236;
+    background-image: linear-gradient(#ddd 50%,#f44236 50%);
+}
+.icons a:nth-last-child(3){
+    color:  #1976d3;
+    background-image: linear-gradient(#ddd 50%,#1976d3 50%);
+}
+.icons a:hover{
+    background-position: 0% 100%;
+    color: #fff;
+}
+
+    </style>
+<body>
+    <div class="container">
+    <div class="icons">
+        <a href="https://facebook.com">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+       <a href="http://youtube.com">
+        <i class="fa-brands fa-youtube"></i>
+       </a>
+      <a href="https://twitter.com">
+        <i class="fa-brands fa-twitter"></i>
+    </a>
+    </div>
+    </div>
+</body>
+</html>

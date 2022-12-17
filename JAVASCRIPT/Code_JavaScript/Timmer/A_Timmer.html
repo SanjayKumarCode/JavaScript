@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar</title>
+    <style>
+    body {
+        font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://img.etimg.com/photo/msid-93652937,imgsize-102678/iStock-1391408732.jpg");
+      }
+      #countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0e2c4c;
+        font-size: 70px;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      .action-list {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      button {
+        border: none;
+        background-color: yellow;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+      }
+      </style>
+
+</head>
+<body onload="startTimer();">
+
+    <div id="countdown">
+        <div id="countdown-number">60</div>
+      </div>
+      <div class="action-list">
+        <button id="stop">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/pause--v1.png" />
+        </button>
+        <button id="start">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/play--v1.png" />
+        </button>
+        <button id="reset">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/stop.png" />
+        </button>
+      </div>
+      <audio id="timeout_audio"></audio>
+      <script>
+        
+const countContainer = document.getElementById("countdown-number");
+
+const startButton = document.getElementById("start");
+const stopButton = document.getElementById("stop");
+const resetButton = document.getElementById("reset");
+
+const timeoutAudio = document.getElementById("timeout_audio");
+let remainingTime = 60;
+let timer;
+let isStopped = true;
+const startTimer = () => {
+  if (isStopped) {
+    isStopped = false;
+    countContainer.innerHTML = remainingTime;
+    timer = setInterval(renderTime, 1000);
+  }
+};
+const stopTimer = () => {
+  isStopped = true;
+  if (timer) {
+    clearInterval(timer);
+  }
+};
+const resetTimer = () => {
+  isStopped = true;
+  clearInterval(timer);
+  remainingTime = 60;
+  countContainer.innerHTML = remainingTime;
+};
+timeoutAudio.src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+timeoutAudio.load();
+
+startButton.onclick = startTimer;
+resetButton.onclick = resetTimer;
+stopButton.onclick = stopTimer;
+
+const renderTime = () => {
+  remainingTime -= 1;
+  countContainer.innerHTML = remainingTime;
+  if (remainingTime === 0) {
+    isStopped = true;
+    clearInterval(timer);
+    timeoutAudio.play();
+    remainingTime = 60;
+  }
+};
+    </script>  
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Hello"></h1>
+    <script>
+        let student=[34,60,65,90,80,10,15];
+        let disc="";
+        for(let i=0;i<student.length;i++){
+            if(student[i]>60){
+                disc+="<h1>"+student[i]+"</h1>"
+            }
+        }
+        document.getElementById("Hello").innerHTML=disc;
+        
+    </script>
+</body>
+</html>

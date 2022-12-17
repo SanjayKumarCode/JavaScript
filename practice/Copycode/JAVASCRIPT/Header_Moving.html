@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.cart_hover {
+float:left;
+padding:7px;
+font-size: 30px;
+font-family: tahoma, sans-serif;
+}
+h3{
+    background-color:black;
+            color: red;
+            position: fixed;
+            font-family: tahoma, sans-serif;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 55px;         
+            text-align: center;     
+            font-size: 30px;
+            margin: 0;
+}
+.show-content{
+  display:block;
+}
+.skip-content {
+  display:none;
+  float:left;
+}
+
+.cart_hover:hover + #header-cart, #header-cart:hover{
+    display:block;
+}
+        
+    </style>
+</head>
+<body>
+    <div class="cart_hover">Zeal park</div>
+    <div id="header-cart" class="skip-content">
+        <h3 class="center1">Zeal park</h3> 
+    </div>
+<script>
+$(".cart_hover").hover(function(){
+    $("#header-cart").addClass("show-content");
+  }
+);
+</script>
+</body>
+</html>

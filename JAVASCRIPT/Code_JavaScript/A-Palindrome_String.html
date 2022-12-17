@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input"/>
+<button id="button">Palindrome?</button>
+<div id="output"></div>
+
+<script>
+
+    let input = document.getElementById("input");
+let output = document.getElementById("output");
+document.getElementById("button").addEventListener("click", function () {
+    let s = input.value;
+    output.innerHTML = s + " is" + (findPalindrome(s) ? "" : " not")
+                     + " a palindrome.";
+ alert("This is a String "+input.value)
+});
+function findPalindrome(str){
+    let str1=str.toLowerCase();
+    
+    let len=str1.length;
+    let mid=Math.floor(len/2);
+    for(let i=0;i<mid;i++){
+        if(str1[i] !==str1[len-1-i]){
+            return false;
+        }
+    }
+    return true;
+}
+document.write(findPalindrome(str))
+</script>
+</body>
+</html>

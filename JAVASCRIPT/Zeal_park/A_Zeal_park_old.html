@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .cart_hover {
+        float:left;
+        padding:3px;
+        font-size: 30px;
+        font-family: tahoma, sans-serif;
+        }
+        h3{
+            background-color:black;
+            color: red;
+            position: fixed;
+            font-family: tahoma, sans-serif;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 55px;         
+            text-align: center;     
+            font-size: 30px;
+            margin: 0;
+        }
+    
+.show-content{
+  display:block;
+}
+.skip-content {
+  display:none;
+  float:left;
+}
+
+.cart_hover:hover + #header-cart, #header-cart:hover{
+    display:block;
+}
+   
+        .column{
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.img1{ float: left;
+    width: 25%;
+    padding: 15px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="cart_hover">Zeal park</div>
+    <div id="header-cart" class="skip-content">
+        <h3 class="center1">Zeal park</h3> 
+    </div>
+    <br><br><br>
+    <Label class="id1" >Enter Your Name</Label>
+    <input type="text" placeholder="Enter Name" name="NAME" size="25" required><br>
+    <div>
+        <input type="radio" id="id1" name="drone" value="card">
+        <label for="card">Card</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="id2" name="drone" value="cash" >
+        <label for="cash">Cash</label>
+      </div>
+
+      <div>
+    <button onclick="func1()">Click</button><br><br>
+    <div class="row">
+        <div class="column">
+            <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="https://wallpaperaccess.com/full/983901.jpg" width="100%"/>
+        </div>
+     
+        <div class="column">
+         <img src="https://wallpapercave.com/wp/wp5192936.jpg" width="100%;">
+        </div>
+        
+        <div class="column">
+            <img src="https://wallpapercave.com/wp/wp5192936.jpg" width="100%;">
+           </div>        
+        </div>
+         </div>
+
+<script>
+function func1(){
+    let rd1=document.getElementById("id1")
+    let rd2=document.getElementById("id2")
+
+    if(rd1.checked==true){
+        alert("please confirm :  "+id1.value);
+    }
+    else if(rd2.checked==true){
+        alert("please confirm : "+id2.value);
+    }
+    else {
+        alert("please select at least one payment method")
+    }
+}
+function setNewImage(){
+document.getElementById("img1").src="https://wallpapers.com/images/hd/elon-musk-tesla-dark-portrait-amafqv6aezdg4zpi.jpg" 
+}
+function setOldImage(){
+    document.getElementById("img1").src="https://wallpapers.com/images/hd/elon-musk-spacex-tesla-ceo-ovr8vqe9a8lo0dso.jpg"
+
+}
+
+
+
+</script>
+</body>
+</html>

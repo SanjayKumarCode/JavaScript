@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Tip Calculator</h1>
+        <div class="field1">
+            <label for="amount" class="field__label1">Amount</label>
+            <input type="text" name="amount" id="amount" placeholder="$" class="field__input1">
+            </input>
+        </div>
+        <div class="field2">
+            <label for="tip" class="field__label2">Tip</label>
+            <select name="tip" id="tip" class="field__input2">
+                <option value="0" selected>No tip 🥲</option>
+                <option value="10">10% 😒</option>
+                <option value="15">15% 🙂</option>
+                <option value="20">20% 🥺</option>
+            </select>
+        </div>
+        <div class="field3">
+            <label for="people" class="field__label3">People</label>
+            <input type="number" value="1" min="1" step="1" id="people" class="field__input3">
+        </div>
+        <button id="calculate">Calculate</button>
+        <div class="info">
+            <p class="info__tip"></p>
+            <p class="info__total"></p>
+        </div>
+    </div>
+</body>
+</html>

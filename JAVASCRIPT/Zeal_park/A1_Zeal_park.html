@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; 
+ 
+}
+    .cart_hover {
+        float:left;
+        padding:3px;
+        font-size: 30px;
+        font-family: tahoma, sans-serif;
+        }
+        h3{
+            background-color:black;
+            color: red;
+            position: fixed;
+            font-family: tahoma, sans-serif;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 55px;         
+            text-align: center;     
+            font-size: 30px;
+            margin: 0;
+        }
+    
+.show-content{
+  display:block;
+}
+.skip-content {
+  display:none;
+  float:left;
+}
+
+.cart_hover:hover + #header-cart, #header-cart:hover{
+    display:block;
+}
+
+        .main{
+    display: flex;
+    justify-content: space-around;
+}
+.img1,.img2,.img3,.img4{
+    width: 100px;
+    height: 100px;
+
+}
+
+    </style>
+</head>
+<body style="margin-bottom:700px ;">
+    <div class="cart_hover">Zeal park</div>
+    <div id="header-cart" class="skip-content">
+        <h3 class="center1">Zeal park</h3> 
+    </div>
+    <br><br><br><br>
+    <Label >Enter Your Name</Label>
+    <input id="input" type="text">
+   <p id="wish"></p>
+    <div>
+        <input type="radio" id="id1" name="drone" value="card">
+        <label for="card">Card</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="id2" name="drone" value="cash" >
+        <label for="cash">Cash</label>
+      </div>
+      <p id="p"></p>
+
+      <div>
+    <button onclick="function1()">Click</button><br><br>
+
+    <div class="main">
+        <img class="img1" id="img1" src="http://m.gettywallpapers.com/wp-content/uploads/2020/01/Joker-Wallpaper-1-768x1394.jpg">
+
+        <img class="img2" id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnYW-1c8dC8k-HcF3Qo7dbQDPDhngz1gpcvwXzdAQ2-Ka6BKcJrrmke4Cc9rgCVynttY&usqp=CAU">
+
+        <img class="img3" id="img3" src="https://www.fortressofsolitude.co.za/wp-content/uploads/2022/05/Tony-Stark-Is-Responsible-For-Creating-Most-of-The-MCUs-Villains.jpg">
+        <img class="img4" id="img4" onmouseover="setNewImage()" onmouseout="setOldImage()" src="https://wallpaperaccess.com/full/983901.jpg" />
+    </div>      
+<script>
+    // take input value to call
+    let name=document.getElementById("input")
+    name.addEventListener("change",function(){
+        document.getElementById("wish").innerHTML="  Hi  " +name.value +"     Welcome to Zeal park please select payment method"
+    })
+
+    // call function show alert 
+function function1(){
+    let rd1=document.getElementById("id1")
+    let rd2=document.getElementById("id2")
+    let p=document.getElementById("p")
+
+    if(rd1.checked==true){
+        alert("please confirm :  "+id1.value);
+        document.getElementById("p").innerHTML="50% offer on card"
+    }
+    else if(rd2.checked==true){
+        alert("please confirm : "+id2.value);
+        document.getElementById("p").innerHTML="Snacks free"
+    }
+    else {
+        alert("please select at least one payment method")
+    }
+}
+
+let pic11 = document.getElementById("img1");
+    pic11.addEventListener("mouseover", function() {
+    pic11.style.width="240px";
+    pic11.style.height="200px";
+});
+let pic12= document.getElementById("img1");
+    pic12.addEventListener("mouseout", function() {
+    pic12.style.width="200px";
+    pic12.style.height="160px";
+    pic12.style.borderRadius="10px"
+});
+
+let pic22 = document.getElementById("img2");
+    pic22.addEventListener("mouseover", function() {
+        pic22.style.opacity="100%"
+    pic22.style.borderRadius="50%"
+});
+let pic21= document.getElementById("img2");
+    pic21.addEventListener("mouseout", function() {
+        pic21.style.opacity="50%"
+    pic21.style.borderRadius="0"
+});
+
+
+let pic33 = document.getElementById("img3");
+    pic33.addEventListener("mouseover", function() {
+        pic33.style.border="5px solid black"
+    pic33.style.width="200px"
+});
+let pic31= document.getElementById("img3");
+    pic31.addEventListener("mouseout", function() {
+        pic31.style.border="none"
+});
+function setNewImage(){
+document.getElementById("img1").src="https://wallpapers.com/images/hd/elon-musk-tesla-dark-portrait-amafqv6aezdg4zpi.jpg"
+}
+function setOldImage(){
+    document.getElementById("img1").src="https://wallpapers.com/images/hd/elon-musk-spacex-tesla-ceo-ovr8vqe9a8lo0dso.jpg"
+
+}
+
+
+
+
+
+</script>
+</body>
+</html>

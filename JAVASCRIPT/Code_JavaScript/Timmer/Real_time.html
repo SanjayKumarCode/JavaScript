@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time</title>
+    <style>
+        body {
+      background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+        <h1>Show Real Time </h1>
+        <h1>AAV</h1>
+        <h1 id="Id1"></h1>
+        <input  type="button" value="Stop" onclick="Stop()"/>
+        
+        <script>
+            let realTime = setInterval(function () { Clock() }, 1000);
+        
+            function Clock() {
+                const x = new Date();
+                const y = x.toLocaleTimeString();
+                document.getElementById("Id1").innerHTML = y;
+            }
+            function Stop() {
+                clearInterval(realTime);
+            }
+        </script>
+</body>
+</html>

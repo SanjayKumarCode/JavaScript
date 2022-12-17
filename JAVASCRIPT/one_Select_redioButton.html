@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar</title>
+</head>
+<body>
+    
+    <div>
+        <input type="radio" id="id1" name="drone" value="male">
+        <label for="male">Male</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="id2" name="drone" value="female" >
+        <label for="female">Female</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="id3" name="drone" value="other" >
+        <label for="other">Other</label>
+      </div>
+      <button onclick="func1()">Click</button>
+      <script>
+        function func1(){
+         let rd1=document.getElementById("id1")
+         let rd2=document.getElementById("id2")
+         let rd3=document.getElementById("id3")
+     
+         if(rd1.checked==true){
+             alert("Select redio button is "+id1.value)
+         }
+         else if(rd2.checked==true){
+             alert("Select redio button is "+id2.value)
+         }
+         else if(rd3.checked==true) {
+             alert("Select redio button is "+id3.value)
+         }
+         else {
+             alert("Select at least one redio button ")
+         }
+        }
+        
+         </script>
+</body>
+</html>

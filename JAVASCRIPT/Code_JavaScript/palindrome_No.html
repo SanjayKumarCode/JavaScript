@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H></H>
+<Script>
+    let num= "171";
+    let temp=num;
+    let rev=0;
+    while(num !=0){
+        //171 is reverse and store rev
+        rev=(rev*10)  + (num%10);
+        // parseInt method value is string return  in integer
+        num=parseInt(num/10);
+        
+    }
+    if(temp==rev){
+        // console => output in console
+        console.log(rev+" plindrome Number");
+        // document => output in window
+        document.write(rev+" plindrome Number");
+    }
+    else{
+        console.log(rev+ " Not plindrome Number");
+        document.write(rev+" Not plindrome Number");
+    }
+</Script>
+</body>
+</html>

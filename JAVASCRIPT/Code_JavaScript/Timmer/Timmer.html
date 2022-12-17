@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sanjay Kumar</h1>
+    <script>
+
+        // code 1
+let countdownTimeoutId// get the countdownIntervalId outside by first declearing a variable to catch the id
+
+function countdown(start) {     // assume the unit of start is minute
+    console.log("countdown called, minutes =" + start)
+    // add code here to change the innerHTML of the timer if you want
+    let secondsToCount = start * 60; //Converting minutes to seconds
+
+    countdownTimeoutId = setTimeout(() => {
+        timer()
+    }, 1000); // starting to count down 
+
+
+    function timer() { // run every seconds
+        const minutes = Math.floor(secondsToCount / 60);
+        let seconds = secondsToCount - minutes*60;
+        console.log("counter= " + minutes + ':' + `${seconds}`.padStart(2, '0'))
+        secondsToCount = secondsToCount-1;
+        if (minutes <= 0 && seconds <= 0) {
+            clearTimeout(countdownTimeoutId); // clearTimeout
+            console.log('timerOver')
+        }else{
+            countdownTimeoutId = setTimeout(timer,1000)
+        }
+    }
+}
+
+function stopCountdownOutside(){
+    if(countdownTimeoutId){
+        clearTimeout(countdownTimeoutId)
+    }
+}
+
+countdown(1) //countdown 2 mins
+
+// code2
+
+
+
+    </script>
+</body>
+</html>

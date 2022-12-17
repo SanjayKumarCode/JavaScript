@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZealPark</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+        }
+        .body1 {
+            display: grid;
+            grid-template-columns:200px 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        .body1>div>img {
+           width: 200px;
+           height: 160px;
+           margin-left: 10%;
+        }
+        .inputs {
+            margin-left: 10px;
+        }
+        
+        .img2 {
+            border-radius: 0%;
+            opacity: 50%;
+        }
+        .img3 {
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <h1 class="heading" id="heading">Zeal Park</h1>
+    </div>
+    
+
+    <div class="body1">
+        <div class="inputs" onclick="clickMe()">
+             <label for="input" >Name</label>
+             <input type="text" name="input" id="input">
+             
+             <p id="output" > </p>
+             <br>
+             <br>
+            <input type="radio" id="rd1" name="rad" value="Card"> Card </input>
+            <input  type="radio" id="rd2" name="rad" value="Cash"> Cash </input>
+            <p id="offers">  </p>
+            <button id="btn2" name="rad" onclick="radFun()">Click</button>
+        </div>
+        <div> <img src="https://play-lh.googleusercontent.com/i1qvljmS0nE43vtDhNKeGYtNlujcFxq72WAsyD2htUHOac57Z9Oiew0FrpGKlEehOvo=w240-h480-rw" class="img1" id="img1" alt=""></div>
+        <div> <img src="https://wallpapers.com/images/hd/cool-profile-pictures-red-anime-fw4wgkj905tjeujb.jpg" class="img2" id="img2" alt=""></div>
+        <div> <img src="https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png" class="img3" id="img3" alt=""></div>
+    </div>
+
+    <script>
+        // first Function
+        var colorhead= document.getElementById("nav");
+
+        colorhead.addEventListener("mouseover", function() {
+    colorhead.style.backgroundColor = "green";
+    colorhead.style.textAlign = "center";
+    colorhead.style.color = "gold";
+});
+    
+colorhead.addEventListener("mouseout", function() {
+    colorhead.style.backgroundColor = "red";
+    colorhead.style.color = "orange";
+    colorhead.style.textAlign = "initial";
+
+});
+
+// --- 2nd ---
+let name = document.getElementById(input);
+
+function clickMe() {
+    const out =(input.value);
+    output.innerHTML= "Hello "+ out + " sir";
+}
+addEventListener("click",clickMe)
+
+
+//3rd and 4th assignment
+function radFun(){
+    const offer = document.getElementById(offers);
+            if(rd1.checked==true){
+                alert("You have selected Card for payment");
+                offers.innerHTML="10% Cashback on next order";
+            }
+            else if(rd2.checked==true){
+            alert("You have selected Cash for payment");
+            offers.innerHTML="10% off on Electronics Item";
+            }
+            else
+            alert("Please Select a Payment Method");
+        } 
+        
+btn2.addEventListener("click",radFun);
+
+
+// 5th Function
+let image1 = document.getElementById("img1");
+    image1.addEventListener("mouseover", function img1() {
+    image1.style.width="240px";
+    image1.style.height="200px";
+});
+let image1a = document.getElementById("img1");
+    image1a.addEventListener("mouseout", function img1() {
+    image1a.style.width="200px";
+    image1a.style.height="160px";
+});
+
+
+let image2 = document.getElementById("img2");
+    image2.addEventListener("mouseover", function img2() {
+    image2.style.opacity="100%";
+    image2.style.borderRadius="50%";
+});
+let image2a = document.getElementById("img2");
+        image2.addEventListener("mouseout", function img2() {
+    image2.style.opacity="50%";
+    image2.style.borderRadius="0%";
+});
+
+        let image3 = document.getElementById("img3");
+        image3.addEventListener("mouseover", function img3() {
+    image3.style.border = "0";
+});
+let image3a = document.getElementById("img3");
+        image3.addEventListener("mouseout", function img3() {
+    image3.style.border = "5px solid black";
+});
+        
+    </script>
+</body>
+</html>

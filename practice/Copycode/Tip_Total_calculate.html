@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            
+            justify-items: center;
+        }
+        .form {
+            border: 2px double red;
+            background-color: lightpink;
+            height: 400px;
+            width: 500px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .h1 {
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: oblique;
+        }
+        button {
+            margin-top: 30px;
+        }
+        #output {
+            background-color: aliceblue;
+            width: 50px;
+            height: 20px;
+            font-weight: bolder;
+            font-display: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>Billing App</h1>
+      <span>Bill Amount </span> <br> <input id="bill" type="number"> <br> <br>
+       <span>Tip Percent </span> <br> <input id="tippercent" type="number"> <br>
+       <button class="btn" value="calculate" id="calculate" onclick="totalBill();" >Calculate</button>
+        <br> <br><br>
+        <output  id="output" name="output"></output>
+    </div>
+    
+    <script >
+            const input1= document.getElementById('bill');
+const input2=document.getElementById('tippercent');
+const calculate=document.getElementById("calculate");
+const output=document.getElementById('output');
+
+function totalBill() {
+    
+    const bill = parseInt(input1.value);
+    const tippercent = parseInt(input2.value);   
+    
+    const tBill = bill + (bill*(tippercent/100));       
+    
+    output.innerHTML= tBill;
+    
+
+       
+calculate.addEventListener('click',totalBill);
+}
+    </script>
+</body>
+</html>
+</body>
+</html>
